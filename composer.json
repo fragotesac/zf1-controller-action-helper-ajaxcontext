@@ -12,7 +12,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.0.0",
-        "diablomedia/zendframework1-controller-action-helper-contextswitch": "*"
+        "diablomedia/zendframework1-controller-action-helper-contextswitch": "^1.0.0"
     },
     "autoload": {
         "psr-0": {
