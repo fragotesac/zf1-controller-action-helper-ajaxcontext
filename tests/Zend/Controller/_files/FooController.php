@@ -66,5 +66,4 @@ class FooController extends Zend_Controller_Action
     {
         $this->_response->appendBody("Bar action called\n");
     }
-
 }

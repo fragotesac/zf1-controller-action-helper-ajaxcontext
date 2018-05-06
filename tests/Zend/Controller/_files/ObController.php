@@ -60,5 +60,4 @@ class ObController extends Zend_Controller_Action
         $view->addBasePath(dirname(dirname(__FILE__)) . '/views');
         $view->render('ob.phtml');
     }
-
 }

@@ -66,5 +66,4 @@ class BazController extends Zend_Controller_Action
     {
         $this->_response->appendBody("Default Baz::bar action called\n");
     }
-
 }

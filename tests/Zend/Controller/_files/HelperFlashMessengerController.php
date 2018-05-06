@@ -71,7 +71,5 @@ class HelperFlashMessengerController extends Zend_Controller_Action
         if ($flashmessenger->getResponse() === $this->getResponse()) {
             $this->getResponse()->appendBody('6');
         }
-
     }
-
 }

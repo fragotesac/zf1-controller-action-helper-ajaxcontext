@@ -66,5 +66,4 @@ class Admin_BazController extends Zend_Controller_Action
     {
         $this->_response->appendBody("Admin's Baz::bar action called\n");
     }
-
 }

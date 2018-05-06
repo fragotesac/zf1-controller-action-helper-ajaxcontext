@@ -98,5 +98,4 @@ class IndexController extends Zend_Controller_Action
     {
         $this->_response->appendBody('Reset action called');
     }
-
 }

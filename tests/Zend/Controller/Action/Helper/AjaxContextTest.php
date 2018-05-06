@@ -69,7 +69,7 @@ class Zend_Controller_Action_Helper_AjaxContextTest extends PHPUnit\Framework\Te
 
         $this->helper = new Zend_Controller_Action_Helper_AjaxContext();
 
-        $this->request = new Zend_Controller_Request_Http();
+        $this->request  = new Zend_Controller_Request_Http();
         $this->response = new Zend_Controller_Response_Cli();
 
         $this->front->setRequest($this->request)->setResponse($this->response);
@@ -188,7 +188,7 @@ class Zend_Controller_Action_Helper_AjaxContextTest extends PHPUnit\Framework\Te
     public function testAjaxContextIsRequestDependent()
     {
         $request = new ZendTest_Controller_Request_SimpleMock_AjaxTest();
-        $helper = new Zend_Controller_Action_Helper_AjaxContext();
+        $helper  = new Zend_Controller_Action_Helper_AjaxContext();
 
         $helper->setActionController(
                     new Zend_Controller_Action_Helper_AjaxContextTestController(
@@ -201,8 +201,8 @@ class Zend_Controller_Action_Helper_AjaxContextTest extends PHPUnit\Framework\Te
         try {
             $helper->initContext();
             $this->assertTrue(true);
-        } catch(Exception $e) {
-            if($e->getMessage() == 'test testAjaxContextIsRequestDependent failed' ) {
+        } catch (Exception $e) {
+            if ($e->getMessage() == 'test testAjaxContextIsRequestDependent failed') {
                 $this->fail();
             } else {
                 throw $e;
@@ -211,16 +211,16 @@ class Zend_Controller_Action_Helper_AjaxContextTest extends PHPUnit\Framework\Te
     }
 }
 
-class ZendTest_Controller_Request_SimpleMock_AjaxTest
-    extends Zend_Controller_Request_Simple
+class ZendTest_Controller_Request_SimpleMock_AjaxTest extends Zend_Controller_Request_Simple
 {
-         public function __call($method, $args) {
-             if($method == 'isXmlHttpRequest') {
-                 throw new Exception('test testAjaxContextIsRequestDependent failed');
-             }
+    public function __call($method, $args)
+    {
+        if ($method == 'isXmlHttpRequest') {
+            throw new Exception('test testAjaxContextIsRequestDependent failed');
+        }
 
-             return parent::__call($method, $args);
-         }
+        return parent::__call($method, $args);
+    }
 }
 
 class Zend_Controller_Action_Helper_AjaxContextTestController extends Zend_Controller_Action
