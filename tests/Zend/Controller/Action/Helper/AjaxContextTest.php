@@ -195,7 +195,7 @@ class Zend_Controller_Action_Helper_AjaxContextTest extends PHPUnit\Framework\Te
                 $request,
                 $this->response,
                 array()
-                    )
+            )
         );
 
         try {
