@@ -46,6 +46,15 @@ require_once 'Zend/View.php';
  */
 class Zend_Controller_Action_Helper_AjaxContextTest extends PHPUnit\Framework\TestCase
 {
+    protected $front;
+    protected $layout;
+    protected $helper;
+    protected $request;
+    protected $response;
+    protected $view;
+    protected $viewRenderer;
+    protected $controller;
+
     /**
      * Sets up the fixture, for example, open a network connection.
      * This method is called before a test is executed.
@@ -223,6 +232,7 @@ class ZendTest_Controller_Request_SimpleMock_AjaxTest extends Zend_Controller_Re
     }
 }
 
+#[AllowDynamicProperties]
 class Zend_Controller_Action_Helper_AjaxContextTestController extends Zend_Controller_Action
 {
     public $ajaxable = array(
