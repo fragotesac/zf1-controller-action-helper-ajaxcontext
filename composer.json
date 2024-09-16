@@ -11,7 +11,7 @@
     "prefer-stable": true,
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-        "diablomedia/zendframework1-controller-action-helper-contextswitch": "^1.0.5"
+        "fragotesac/zf1-controller-action-helper-contextswitch": "^1.0.5"
     },
     "autoload": {
         "classmap": [
